@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+
+</head>
+<body>
+<h1>Hello World</h1>
+{{ if .Signatures }}
+<p>You have {{.SignatureCount}} signs already, <a href="/guestbook/new/">add yours</a></p>
+{{ range .Signatures}}
+<p>{{.}}</p>
+{{ end }}
+{{ else }}
+<p>No entry available yet <a href="/guestbook/new/">be the first</a></p>
+{{ end }}
+</body>
+</html>
